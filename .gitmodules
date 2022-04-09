@@ -1,3 +1,6 @@
 [submodule "linux"]
 	path = linux
 	url = https://github.com/r4v10l1/arch-files
+[submodule "browser"]
+	path = browser
+	url = https://github.com/r4v10l1/browser-homepage
