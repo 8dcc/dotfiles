@@ -4,3 +4,6 @@
 [submodule "browser"]
 	path = browser
 	url = https://github.com/r4v10l1/browser-homepage
+[submodule "vim"]
+	path = vim
+	url = https://github.com/r4v10l1/vim-dotfiles
