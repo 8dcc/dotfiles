@@ -7,3 +7,6 @@
 [submodule "vim"]
 	path = vim
 	url = https://github.com/r4v10l1/vim-dotfiles
+[submodule "windows"]
+	path = windows
+	url = https://github.com/r4v10l1/cmder-dotfiles
