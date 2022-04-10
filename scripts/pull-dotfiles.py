@@ -37,7 +37,7 @@ def pull_repo_linux():
     repo_path = "%s/linux" % main_repo_path
     repo = git.Repo(repo_path)
     repo_origin = repo.remotes.origin
-    cprint_pulling(Fore.BLUE, "Linux", "r4v10l1/arch-files")
+    cprint_pulling(Fore.BLUE, "Linux", "r4v10l1/arch-dotfiles")
     repo_origin.fetch()
     commits_to_pull = repo.git.rev_list("--count", "origin..HEAD")
     repo_origin.pull()
