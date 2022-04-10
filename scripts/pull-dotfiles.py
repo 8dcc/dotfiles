@@ -38,6 +38,7 @@ def pull_repo_linux():
     repo = git.Repo(repo_path)
     repo_origin = repo.remotes.origin
     cprint_pulling(Fore.BLUE, "Linux", "r4v10l1/arch-files")
+    repo_origin.fetch()
     commits_to_pull = repo.git.rev_list("--count", "origin..HEAD")
     repo_origin.pull()
     cprint_pulled(Fore.BLUE, "Linux", commits_to_pull)
@@ -47,6 +48,7 @@ def pull_repo_windows():
     repo = git.Repo(repo_path)
     repo_origin = repo.remotes.origin
     cprint_pulling(Fore.CYAN, "Windows", "r4v10l1/cmder-dotfiles")
+    repo_origin.fetch()
     commits_to_pull = repo.git.rev_list("--count", "origin..HEAD")
     repo_origin.pull()
     cprint_pulled(Fore.CYAN, "Windows", commits_to_pull)
@@ -56,6 +58,7 @@ def pull_repo_browser():
     repo = git.Repo(repo_path)
     repo_origin = repo.remotes.origin
     cprint_pulling(Fore.YELLOW, "Browser", "r4v10l1/browser-homepage")
+    repo_origin.fetch()
     commits_to_pull = repo.git.rev_list("--count", "origin..HEAD")
     repo_origin.pull()
     cprint_pulled(Fore.YELLOW, "Browser", commits_to_pull)
@@ -65,6 +68,7 @@ def pull_repo_vim():
     repo = git.Repo(repo_path)
     repo_origin = repo.remotes.origin
     cprint_pulling(Fore.GREEN, "Vim", "r4v10l1/vim-dotfiles")
+    repo_origin.fetch()
     commits_to_pull = repo.git.rev_list("--count", "origin..HEAD")
     repo_origin.pull()
     cprint_pulled(Fore.GREEN, "Vim", commits_to_pull)
