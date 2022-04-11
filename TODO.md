@@ -1,0 +1,2 @@
+- [ ] Add branch checking to `pull-dotfiles.py`
+    - [ ] Checkout to main if detached
