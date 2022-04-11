@@ -1,12 +1,20 @@
 [submodule "linux"]
 	path = linux
 	url = https://github.com/r4v10l1/arch-dotfiles
+	branch = main
+	update = merge
 [submodule "browser"]
 	path = browser
 	url = https://github.com/r4v10l1/browser-homepage
+	branch = main
+	update = merge
 [submodule "vim"]
 	path = vim
 	url = https://github.com/r4v10l1/vim-dotfiles
+	branch = main
+	update = merge
 [submodule "windows"]
 	path = windows
 	url = https://github.com/r4v10l1/cmder-dotfiles
+	branch = main
+	update = merge
