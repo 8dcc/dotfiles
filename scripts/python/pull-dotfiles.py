@@ -7,9 +7,9 @@ try:
 except Exception:
     colorama_found = False
 
-#############################
-main_repo_path = ".."       # The location of r4v10l1/dotfiles. Because we are in /scripts, ".."
-#############################
+################################
+main_repo_path = "../.."       # The location of r4v10l1/dotfiles. Because we are in /scripts/python, "../.."
+################################
 
 # -----------------------------------------------------------------------
 # Functions for printing with colorama (if found)
