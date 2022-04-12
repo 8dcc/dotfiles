@@ -60,7 +60,7 @@ def pull_repo_linux():
     try:
         repo = git.Repo(repo_path)
     except Exception:
-        cprint_error("I can't find a repo in %s..." % (repo_path))
+        cprint_error("I can't find a repo in %s" % (repo_path))
         cprint_error_suggestion()
         exit(1)
     repo_origin = repo.remotes.origin
@@ -75,7 +75,7 @@ def pull_repo_windows():
     try:
         repo = git.Repo(repo_path)
     except Exception:
-        cprint_error("I can't find a repo in %s..." % (repo_path))
+        cprint_error("I can't find a repo in %s" % (repo_path))
         cprint_error_suggestion()
         exit(1)
     repo_origin = repo.remotes.origin
@@ -90,7 +90,7 @@ def pull_repo_browser():
     try:
         repo = git.Repo(repo_path)
     except Exception:
-        cprint_error("I can't find a repo in %s..." % (repo_path))
+        cprint_error("I can't find a repo in %s" % (repo_path))
         cprint_error_suggestion()
         exit(1)
     repo_origin = repo.remotes.origin
@@ -105,7 +105,7 @@ def pull_repo_vim():
     try:
         repo = git.Repo(repo_path)
     except Exception:
-        cprint_error("I can't find a repo in %s..." % (repo_path))
+        cprint_error("I can't find a repo in %s" % (repo_path))
         cprint_error_suggestion()
         exit(1)
     repo_origin = repo.remotes.origin
