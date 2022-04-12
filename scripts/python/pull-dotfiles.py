@@ -44,7 +44,7 @@ def cprint_error(error_text):
     else:
         print("[Error] %s" % (error_text))
 
-def cprint_error_sugestion():
+def cprint_error_suggestion():
     if colorama_found:
         print("%s%s[%s%sInfo%s%s] You might want to use %s--recurse-submodules%s when cloning, or run %sscripts/sync-dotfiles.sh%s to easily pull all of them.%s" % 
                 (Style.RESET_ALL, Fore.WHITE, Fore.BLUE, Style.BRIGHT, Style.RESET_ALL, Fore.WHITE,
@@ -61,7 +61,7 @@ def pull_repo_linux():
         repo = git.Repo(repo_path)
     except Exception:
         cprint_error("I can't find a repo in %s..." % (repo_path))
-        cprint_error_sugestion()
+        cprint_error_suggestion()
         exit(1)
     repo_origin = repo.remotes.origin
     cprint_pulling(Fore.BLUE, "Linux", "r4v10l1/arch-dotfiles")
@@ -76,7 +76,7 @@ def pull_repo_windows():
         repo = git.Repo(repo_path)
     except Exception:
         cprint_error("I can't find a repo in %s..." % (repo_path))
-        cprint_error_sugestion()
+        cprint_error_suggestion()
         exit(1)
     repo_origin = repo.remotes.origin
     cprint_pulling(Fore.CYAN, "Windows", "r4v10l1/cmder-dotfiles")
@@ -91,7 +91,7 @@ def pull_repo_browser():
         repo = git.Repo(repo_path)
     except Exception:
         cprint_error("I can't find a repo in %s..." % (repo_path))
-        cprint_error_sugestion()
+        cprint_error_suggestion()
         exit(1)
     repo_origin = repo.remotes.origin
     cprint_pulling(Fore.YELLOW, "Browser", "r4v10l1/browser-homepage")
@@ -106,7 +106,7 @@ def pull_repo_vim():
         repo = git.Repo(repo_path)
     except Exception:
         cprint_error("I can't find a repo in %s..." % (repo_path))
-        cprint_error_sugestion()
+        cprint_error_suggestion()
         exit(1)
     repo_origin = repo.remotes.origin
     cprint_pulling(Fore.GREEN, "Vim", "r4v10l1/vim-dotfiles")
