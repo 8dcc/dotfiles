@@ -52,6 +52,14 @@ def cprint_error_suggestion():
     else:
         print("[Info] You might want to use --recurse-submodules when cloning, or run scripts/sync-dotfiles.sh to easily pull all of them.")
 
+def cprint_detached(repo_color, repo_name):
+    if colorama_found:
+        print("%s%s[%s%s%s%s%s] Head is detached. Checking out to %smain%s...%s" % 
+                (Style.RESET_ALL, Fore.WHITE, repo_color, Style.BRIGHT, repo_name, Style.RESET_ALL, Fore.WHITE,
+                    Style.BRIGHT, Style.NORMAL, Style.RESET_ALL))
+    else:
+        print("[%s] Head is detached. Checking out to main..." % (repo_name, commit_number))
+
 # -----------------------------------------------------------------------
 # Functions for each repo
 
@@ -62,6 +70,10 @@ def pull_repo_linux():
     except Exception:
         cprint_error("I can't find a repo in %s" % (repo_path))
         cprint_error_suggestion()
+        exit(1)
+    if repo.head.is_detached:
+        cprint_detached(Fore.BLUE, "Linux")
+        repo.git.checkout("main")
         exit(1)
     repo_origin = repo.remotes.origin
     cprint_pulling(Fore.BLUE, "Linux", "r4v10l1/arch-dotfiles")
@@ -78,6 +90,10 @@ def pull_repo_windows():
         cprint_error("I can't find a repo in %s" % (repo_path))
         cprint_error_suggestion()
         exit(1)
+    if repo.head.is_detached:
+        cprint_detached(Fore.CYAN, "Windows")
+        repo.git.checkout("main")
+        exit(1)
     repo_origin = repo.remotes.origin
     cprint_pulling(Fore.CYAN, "Windows", "r4v10l1/cmder-dotfiles")
     repo_origin.fetch()
@@ -93,6 +109,10 @@ def pull_repo_browser():
         cprint_error("I can't find a repo in %s" % (repo_path))
         cprint_error_suggestion()
         exit(1)
+    if repo.head.is_detached:
+        cprint_detached(Fore.YELLOW, "Browser")
+        repo.git.checkout("main")
+        exit(1)
     repo_origin = repo.remotes.origin
     cprint_pulling(Fore.YELLOW, "Browser", "r4v10l1/browser-homepage")
     repo_origin.fetch()
@@ -107,6 +127,10 @@ def pull_repo_vim():
     except Exception:
         cprint_error("I can't find a repo in %s" % (repo_path))
         cprint_error_suggestion()
+        exit(1)
+    if repo.head.is_detached:
+        cprint_detached(Fore.GREEN, "Vim")
+        repo.git.checkout("main")
         exit(1)
     repo_origin = repo.remotes.origin
     cprint_pulling(Fore.GREEN, "Vim", "r4v10l1/vim-dotfiles")
