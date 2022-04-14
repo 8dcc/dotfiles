@@ -49,7 +49,7 @@ def cprint_error_suggestion():
         print("%s%s[%s%sInfo%s%s] You might want to use %s--recurse-submodules%s when cloning, or run %sscripts/sync-dotfiles.sh%s to easily pull all of them.%s" % 
                 (Style.RESET_ALL, Fore.WHITE, Fore.BLUE, Style.BRIGHT, Style.RESET_ALL, Fore.WHITE,
                     Style.BRIGHT, Style.NORMAL, Style.BRIGHT, Style.NORMAL, Style.RESET_ALL))
-         print("%s%s[%s%sInfo%s%s] You can also use %sgit submodule update --init --recursive%s from the main repo folder to fix this.%s" % 
+        print("%s%s[%s%sInfo%s%s] You can also use %sgit submodule update --init --recursive%s from the main repo folder to fix this.%s" % 
                 (Style.RESET_ALL, Fore.WHITE, Fore.BLUE, Style.BRIGHT, Style.RESET_ALL, Fore.WHITE,
                     Style.BRIGHT, Style.NORMAL, Style.RESET_ALL))
     else:
