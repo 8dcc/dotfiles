@@ -74,7 +74,6 @@ def pull_repo_linux():
     if repo.head.is_detached:
         cprint_detached(Fore.BLUE, "Linux")
         repo.git.checkout("main")
-        exit(1)
     repo_origin = repo.remotes.origin
     cprint_pulling(Fore.BLUE, "Linux", "r4v10l1/arch-dotfiles")
     repo_origin.fetch()
@@ -93,7 +92,6 @@ def pull_repo_windows():
     if repo.head.is_detached:
         cprint_detached(Fore.CYAN, "Windows")
         repo.git.checkout("main")
-        exit(1)
     repo_origin = repo.remotes.origin
     cprint_pulling(Fore.CYAN, "Windows", "r4v10l1/cmder-dotfiles")
     repo_origin.fetch()
@@ -112,7 +110,6 @@ def pull_repo_browser():
     if repo.head.is_detached:
         cprint_detached(Fore.YELLOW, "Browser")
         repo.git.checkout("main")
-        exit(1)
     repo_origin = repo.remotes.origin
     cprint_pulling(Fore.YELLOW, "Browser", "r4v10l1/browser-homepage")
     repo_origin.fetch()
@@ -131,7 +128,6 @@ def pull_repo_vim():
     if repo.head.is_detached:
         cprint_detached(Fore.GREEN, "Vim")
         repo.git.checkout("main")
-        exit(1)
     repo_origin = repo.remotes.origin
     cprint_pulling(Fore.GREEN, "Vim", "r4v10l1/vim-dotfiles")
     repo_origin.fetch()
