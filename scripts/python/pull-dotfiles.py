@@ -58,7 +58,7 @@ def cprint_detached(repo_color, repo_name):
                 (Style.RESET_ALL, Fore.WHITE, repo_color, Style.BRIGHT, repo_name, Style.RESET_ALL, Fore.WHITE,
                     Style.BRIGHT, Style.NORMAL, Style.RESET_ALL))
     else:
-        print("[%s] Head is detached. Checking out to main..." % (repo_name, commit_number))
+        print("[%s] Head is detached. Checking out to main..." % (repo_name))
 
 # -----------------------------------------------------------------------
 # Functions for each repo
