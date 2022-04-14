@@ -30,9 +30,9 @@ def cprint_pulling(repo_color, repo_name, remote_name):
 
 def cprint_pulled(repo_color, repo_name, commit_number):
     if colorama_found:
-        print("%s%s[%s%s%s%s%s] Pulled %s%s%s commits from origin/main...%s" % 
+        print("%s%s[%s%s%s%s%s] Pulled %s%s%s commits from %sorigin/main%s...%s" % 
                 (Style.RESET_ALL, Fore.WHITE, repo_color, Style.BRIGHT, repo_name, Style.RESET_ALL, Fore.WHITE,
-                    repo_color, commit_number, Fore.WHITE, Style.RESET_ALL))
+                    repo_color, commit_number, Fore.WHITE, Style.BRIGHT, Style.NORMAL, Style.RESET_ALL))
     else:
         print("[%s] Pulled %s commits from origin/main..." % (repo_name, commit_number))
 
