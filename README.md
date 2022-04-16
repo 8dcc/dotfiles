@@ -30,6 +30,8 @@ cd scripts/python
 python3 pull-dotfiles.py
 ```
 
+![Screenshot 1](scripts/python/.screenshot1.png)
+
 #### Bash
 In my opinion the best way to automate all of the above (Although not as fancy and elavorated as the python way) is to use my `sync-dotfiles.sh` script.
 Even if you did not use `--recurse-submodules` when cloning, you can use my bash script to:
