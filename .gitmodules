@@ -15,6 +15,6 @@
 	update = merge
 [submodule "windows"]
 	path = windows
-	url = https://github.com/r4v10l1/cmder-dotfiles
+	url = https://github.com/r4v10l1/windows-dotfiles
 	branch = main
 	update = merge

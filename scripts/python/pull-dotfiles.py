@@ -96,7 +96,7 @@ def pull_repo_windows():
         cprint_detached(Fore.CYAN, "Windows")
         repo.git.checkout("main")
     repo_origin = repo.remotes.origin
-    cprint_pulling(Fore.CYAN, "Windows", "r4v10l1/cmder-dotfiles")
+    cprint_pulling(Fore.CYAN, "Windows", "r4v10l1/windows-dotfiles")
     repo_origin.fetch()
     commits_to_pull = repo.git.rev_list("--count", "HEAD..origin/main")
     repo_origin.pull()
