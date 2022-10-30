@@ -1,6 +1,6 @@
 [submodule "linux"]
 	path = linux
-	url = https://github.com/r4v10l1/arch-dotfiles
+	url = https://github.com/r4v10l1/linux-dotfiles
 	branch = main
 	update = merge
 [submodule "browser"]
