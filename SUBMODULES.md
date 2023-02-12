@@ -18,7 +18,7 @@ without starting path separator
 git config -f .gitmodules submodule.<submodule-path>.branch <branch>
 git config -f .gitmodules submodule.<submodule-path>.update <rebase|merge>
 ```
-However, after trying this I was hoping that `git submodules update --recursive` would use the main branch. That did not happen so I made [a script](https://github.com/r4v10l1/dotfiles/blob/main/scripts/sync-dotfiles.sh).
+However, after trying this I was hoping that `git submodules update --recursive` would use the main branch. That did not happen so I made [a script](https://github.com/8dcc/dotfiles/blob/main/scripts/sync-dotfiles.sh).
 
 
 ### Pulling repositories
@@ -27,4 +27,4 @@ There is also a git command for doing this:
 ```bash
 git submodule update --init --recursive         # Git command
 ```
-Check the [main readme](https://github.com/r4v10l1/dotfiles#pulling-the-repositories) for more info.
+Check the [main readme](https://github.com/8dcc/dotfiles#pulling-the-repositories) for more info.

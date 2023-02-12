@@ -4,9 +4,9 @@
 ### Cloning
 Because this repository has [submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules), you need to specify a parameter to the git clone command ([?](http://git-scm.com/book/en/v2/Git-Tools-Submodules#_cloning_submodules)):
 ```bash
-git clone --recurse-submodules https://github.com/r4v10l1/dotfiles
+git clone --recurse-submodules https://github.com/8dcc/dotfiles
 ```
-Check [SUBMODULES.md](https://github.com/r4v10l1/dotfiles/blob/main/SUBMODULES.md) for more info.
+Check [SUBMODULES.md](https://github.com/8dcc/dotfiles/blob/main/SUBMODULES.md) for more info.
 
 ### Pulling the repositories
 Once you have them downloaded, there might be changes to the submodules! And if you do a `git pull` on the dotfiles repository, you will not pull the submodules.  
