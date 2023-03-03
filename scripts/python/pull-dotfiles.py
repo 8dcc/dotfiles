@@ -14,7 +14,7 @@ except Exception:
     colorama_found = False
 
 ################################
-main_repo_path = "../.."       # The location of r4v10l1/dotfiles. Because we are in /scripts/python, "../.."
+main_repo_path = "../.."       # The location of 8dcc/dotfiles. Because we are in /scripts/python, "../.."
 ################################
 
 # -----------------------------------------------------------------------
@@ -78,7 +78,7 @@ def pull_repo_linux():
         cprint_detached(Fore.BLUE, "Linux")
         repo.git.checkout("main")
     repo_origin = repo.remotes.origin
-    cprint_pulling(Fore.BLUE, "Linux", "r4v10l1/arch-dotfiles")
+    cprint_pulling(Fore.BLUE, "Linux", "8dcc/arch-dotfiles")
     repo_origin.fetch()
     commits_to_pull = repo.git.rev_list("--count", "HEAD..origin/main")
     repo_origin.pull()
@@ -96,7 +96,7 @@ def pull_repo_windows():
         cprint_detached(Fore.CYAN, "Windows")
         repo.git.checkout("main")
     repo_origin = repo.remotes.origin
-    cprint_pulling(Fore.CYAN, "Windows", "r4v10l1/windows-dotfiles")
+    cprint_pulling(Fore.CYAN, "Windows", "8dcc/windows-dotfiles")
     repo_origin.fetch()
     commits_to_pull = repo.git.rev_list("--count", "HEAD..origin/main")
     repo_origin.pull()
@@ -114,7 +114,7 @@ def pull_repo_browser():
         cprint_detached(Fore.YELLOW, "Browser")
         repo.git.checkout("main")
     repo_origin = repo.remotes.origin
-    cprint_pulling(Fore.YELLOW, "Browser", "r4v10l1/browser-homepage")
+    cprint_pulling(Fore.YELLOW, "Browser", "8dcc/browser-homepage")
     repo_origin.fetch()
     commits_to_pull = repo.git.rev_list("--count", "HEAD..origin/main")
     repo_origin.pull()
@@ -132,7 +132,7 @@ def pull_repo_vim():
         cprint_detached(Fore.GREEN, "Vim")
         repo.git.checkout("main")
     repo_origin = repo.remotes.origin
-    cprint_pulling(Fore.GREEN, "Vim", "r4v10l1/vim-dotfiles")
+    cprint_pulling(Fore.GREEN, "Vim", "8dcc/vim-dotfiles")
     repo_origin.fetch()
     commits_to_pull = repo.git.rev_list("--count", "HEAD..origin/main")
     repo_origin.pull()
