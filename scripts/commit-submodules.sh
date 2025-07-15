@@ -1,17 +1,17 @@
-#!/bin/bash
-
+#!/usr/bin/env bash
+#
 # Commits each submodule. stdout is disabled for ignoring errors,
 # keep that in mind.
 
-cd ..
-
 commit() {
-    git add $1 1>/dev/null
-    git commit -m "Update $1 repo" 1>/dev/null
+    git add "$1" 1> /dev/null
+    git commit -m "Update $1 repo" 1> /dev/null
 }
 
-commit "browser"
-commit "linux"
-commit "vim"
-commit "emacs"
-commit "windows"
+cd "$(dirname -- "$(readlink -f -- "${BASH_SOURCE[0]}")")/.." || exit 1
+commit 'browser'
+commit 'linux'
+commit 'vim'
+commit 'emacs'
+commit 'windows'
+echo 'All done.'
